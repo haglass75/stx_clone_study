@@ -43,15 +43,81 @@ body {
   /* background-color: rgb(203, 247, 232); */
 }
 /* clearfix */
-.clearfix::after{
-content: "";
-position: relative;
-display: block;
-width: 100%;
-clear: both;
+.clearfix::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 100%;
+  clear: both;
 }
 /* 모달창 */
 /* top버튼 */
+.top-buttom {
+  position: fixed;
+  right: 30px;
+  bottom: 60px;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.chat-btn {
+  animation: updown 1.5s infinite;
+}
+/* 애니메이션 효과 */
+@keyframes updown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.chat-btn span {
+  position: absolute;
+  top: 34px;
+  left: -186px;
+  width: 180px;
+  background-color: #fff;
+  border-radius: 23px;
+  padding: 8px 10px;
+  text-align: center;
+  box-shadow: 0px 3px 7px 0 rgb(0, 0, 0, 0.3);
+  display: none;
+}
+.chat-btn:hover span {
+  display: block;
+}
+.shop-btn {
+  position: relative;
+  display: block;
+  width: 55px;
+  line-height: 55px;
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0px 3px 7px 0 rgb(0, 0, 0, 0.3);
+}
+.top-btn {
+  width: 55px;
+  line-height: 55px;
+  border-radius: 50%;
+  background-color: #ed1c24;
+  text-align: center;
+  box-shadow: 0px 3px 7px 0 rgb(0, 0, 0, 0.3);
+}
+.top-btn img{
+  transform: rotate(180deg);
+}
+.top-btn img.up{
+  transform: rotate(0deg);
+}
 /* 전체 레이아웃 */
 .wrap {
   position: relative;
@@ -305,7 +371,7 @@ clear: both;
 .business-list li a:hover {
   background-color: rgba(244, 128, 37, 1);
 }
-.business-list li a:hover::after{
+.business-list li a:hover::after {
   opacity: 1;
 }
 .business-list li a::after {
@@ -322,32 +388,32 @@ clear: both;
   opacity: 0;
   transition: all 0.5s;
 }
-.business-list li:nth-child(1) a::after{
+.business-list li:nth-child(1) a::after {
   background-position: -169px 0;
 }
-.business-list li:nth-child(2) a::after{
+.business-list li:nth-child(2) a::after {
   background-position: -298px 0;
 }
-.business-list li:nth-child(3) a::after{
+.business-list li:nth-child(3) a::after {
   background-position: 0 -117px;
 }
-.business-list li:nth-child(4) a::after{
+.business-list li:nth-child(4) a::after {
   background-position: -139px -122px;
 }
-.business-list li:nth-child(5) a::after{
-  background-position:-274px -115px;
+.business-list li:nth-child(5) a::after {
+  background-position: -274px -115px;
   left: 53%;
   bottom: 80px;
 }
 /* 뉴스 */
-.news{
+.news {
   position: relative;
   display: block;
   width: 100%;
   padding: 55px 0;
   background-color: #ed1c24;
 }
-.news-bg{
+.news-bg {
   position: absolute;
   top: 0;
   left: 50%;
@@ -355,90 +421,87 @@ clear: both;
   height: 100%;
   background-color: #58595b;
 }
-.news-inner{
+.news-inner {
   position: relative;
   display: block;
 }
-.news-wrap{
+.news-wrap {
   position: relative;
   display: block;
   width: calc(50% - 95px);
 }
-.news-wrap:nth-child(1){
+.news-wrap:nth-child(1) {
   float: left;
 }
-.news-wrap:nth-child(2){
+.news-wrap:nth-child(2) {
   float: right;
 }
-.news-wrap h3{
+.news-wrap h3 {
   font-size: 32px;
   color: #fff;
   font-weight: 300;
   margin-bottom: 45px;
 }
-.news-content{
+.news-content {
   position: relative;
   display: block;
 }
-.news-list li{
+.news-list li {
   position: relative;
   display: block;
   padding: 25px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
-.news-list li a{
+.news-list li a {
   color: #fff;
   font-size: 16px;
   display: block;
   position: relative;
 }
-.news-list li a::after{
-  
+.news-list li a::after {
 }
-.news-txt{
-position: relative;
-display: block;
-/* 말줄임 표시 */
-width: 50%;
-white-space: nowrap;
-text-overflow: ellipsis;
-overflow: hidden;
-<<<<<<< HEAD
+.news-txt {
+  position: relative;
+  display: block;
+  /* 말줄임 표시 */
+  width: 50%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 /* cs */
-.cs{
+.cs {
   position: relative;
   display: block;
   background-color: #f8f8f8;
   padding: 60px 0;
   height: 290px;
 }
-.cs-inner{
- position: relative;
- display: block;
- height: auto;
-}
-.cs-link{
+.cs-inner {
   position: relative;
   display: block;
-  width:calc(50% - 1px) ;
+  height: auto;
+}
+.cs-link {
+  position: relative;
+  display: block;
+  width: calc(50% - 1px);
   /* height: 200px; */
   padding: 40px 60px;
   float: left;
-  
 }
-.cs-link:first-child{
+.cs-link:first-child {
   height: 100%;
-  background: url("../images/bg_faq.png")no-repeat #fff;
+  background: url("../images/bg_faq.png") no-repeat #fff;
   background-position: calc(100% - 50px);
   margin-right: 1px;
 }
-.cs-link:last-child{
+.cs-link:last-child {
   height: 100%;
-  background: url("../images/bg_custom.png")no-repeat #fff;
+  background: url("../images/bg_custom.png") no-repeat #fff;
   background-position: calc(100% - 50px);
 }
-.cs-link h3{
+.cs-link h3 {
   position: relative;
   display: block;
   color: #000;
@@ -447,25 +510,25 @@ overflow: hidden;
   margin-bottom: 20px;
 }
 /* 회사소개 */
-.about{
+.about {
   position: relative;
   display: block;
   padding: 100px 0;
   background-color: #fff;
 }
-.about-inner{
+.about-inner {
   position: relative;
   display: block;
 }
 /* about-top */
-.about-top{
-position: relative;
-display: block;
-background: url("../images/img_about.png")no-repeat;
-background-position: 100%;
-margin-bottom: 80px;
+.about-top {
+  position: relative;
+  display: block;
+  background: url("../images/img_about.png") no-repeat;
+  background-position: 100%;
+  margin-bottom: 80px;
 }
-.about-top h2{
+.about-top h2 {
   position: relative;
   display: block;
   font-size: 44px;
@@ -473,16 +536,16 @@ margin-bottom: 80px;
   font-weight: 600;
   padding-top: 35px;
   margin-bottom: 55px;
-  text-transform: uppercase; 
+  text-transform: uppercase;
 }
-.about-top p{
- position: relative; 
- display: block;
- font-size: 15px;
- padding-left: 100px;
- padding-bottom: 70px;
+.about-top p {
+  position: relative;
+  display: block;
+  font-size: 15px;
+  padding-left: 100px;
+  padding-bottom: 70px;
 }
-.about-top p::before{
+.about-top p::before {
   content: "";
   position: absolute;
   top: 0;
@@ -491,7 +554,7 @@ margin-bottom: 80px;
   height: 5px;
   background-color: #ed1c24;
 }
-.about-top p b{
+.about-top p b {
   position: relative;
   display: block;
   font-size: 21px;
@@ -500,84 +563,82 @@ margin-bottom: 80px;
   padding-bottom: 25px;
 }
 /* about-botoom */
-.about-bottom{
+.about-bottom {
   position: relative;
   display: block;
   text-align: center;
 }
-.about-list{
+.about-list {
   position: relative;
   display: inline-block;
-background-color: antiquewhite;
+  background-color: antiquewhite;
 }
-.about-list li{
+.about-list li {
   position: relative;
   display: block;
   float: left;
 }
-.about-list li a{
+.about-list li a {
   position: relative;
   display: inline-block;
   font-size: 22px;
   color: #111;
   font-weight: 500;
 }
-.about-list li a::before{
+.about-list li a::before {
   content: "";
   display: block;
- /* position: absolute;
+  /* position: absolute;
  top: 0;
  left: 0; */
- width: 110px;
- height: 108px;
- background: url("../images/bg_icon.png")no-repeat;
- margin-bottom: 25px;
+  width: 110px;
+  height: 108px;
+  background: url("../images/bg_icon.png") no-repeat;
+  margin-bottom: 25px;
 }
-.about-list li:nth-child(1) a::before{
+.about-list li:nth-child(1) a::before {
   background-position: 0 0;
 }
 
-.about-list li:nth-child(2) a::before{
+.about-list li:nth-child(2) a::before {
   background-position: -110px 0;
-
 }
-.about-list li:nth-child(2){
+.about-list li:nth-child(2) {
   width: 560px;
 }
-.about-list li:nth-child(3) a::before{
+.about-list li:nth-child(3) a::before {
   background-position: -220px 0;
 }
-.footer{
+/* footer */
+.footer {
   position: relative;
   display: block;
   padding: 50px 0;
   background-color: #4e4e4e;
 }
-.footer-inner{
+.footer-inner {
   position: relative;
   display: block;
 }
-.footer-log{
+.footer-logo {
   position: relative;
   display: block;
   float: left;
   margin-right: 130px;
 }
-.footer-info{
+.footer-info {
   position: relative;
   display: block;
   float: left;
 }
-.footer-list li{
+.footer-list li {
   position: relative;
   display: block;
   font-size: 13px;
   color: #c3c3ce;
   margin-bottom: 5px;
 }
-.footer-list li address{
-  /* adress tag 글자가 기울어지기 떄문에 스타일 속성을 nornmal로 바꾸겠다. */
+.footer-list li address {
+  /* address태그가 글자가 기울어지기 때문에 스타일 normal적용해서 똑바로 세움 */
   font-size: normal;
-=======
->>>>>>> e8d9b1dc9de15a381f1046539e5ffcd283a45e95
 }
