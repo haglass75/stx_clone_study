@@ -403,6 +403,7 @@ width: 50%;
 white-space: nowrap;
 text-overflow: ellipsis;
 overflow: hidden;
+<<<<<<< HEAD
 }
 /* cs */
 .cs{
@@ -577,4 +578,6 @@ background-color: antiquewhite;
 .footer-list li address{
   /* adress tag 글자가 기울어지기 떄문에 스타일 속성을 nornmal로 바꾸겠다. */
   font-size: normal;
+=======
+>>>>>>> e8d9b1dc9de15a381f1046539e5ffcd283a45e95
 }
